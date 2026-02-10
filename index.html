@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Financial Audio Intelligence</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="hero">
+  <h1 class="hero-title">Financial Audio Intelligence</h1>
+  <p class="hero-subtitle">
+    AI-powered analysis of financial calls with sentiment & risk intelligence.
+  </p>
+</header>
+
+<main class="dashboard">
+
+  <!-- UPLOAD -->
+  <section class="panel">
+    <h2 class="panel-title">Upload Audio</h2>
+    <input type="file" id="audioFile" accept="audio/*" />
+    <button onclick="upload()">Analyze Financial Call</button>
+    <p id="status" class="status"></p>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="panel hidden">
+    <h2 class="panel-title">Analysis Overview</h2>
+
+    <!-- METRICS -->
+    <div class="metrics">
+      <div class="metric-card">
+        <h3>Sentiment Distribution</h3>
+        <canvas id="sentimentChart"></canvas>
+      </div>
+
+      <div class="metric-card">
+        <h3>Risk Score</h3>
+        <div id="riskScore" class="risk-score">0</div>
+        <p id="riskLabel"></p>
+      </div>
+    </div>
+
+    <!-- TEXT OUTPUT -->
+    <div class="text-output">
+      <h3>Transcript</h3>
+      <pre id="transcript"></pre>
+
+      <h3>Key Insights</h3>
+      <ul id="insightsList"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  Financial Audio Intelligence © 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
