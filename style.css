@@ -1,0 +1,66 @@
+pre {
+  background: #020617;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+
+  white-space: pre-wrap;     /* wrap lines */
+  word-wrap: break-word;     /* break long words */
+  overflow-wrap: break-word;
+
+  max-height: 260px;         /* keep content visible */
+  overflow-y: auto;          /* scroll inside block */
+}
+html, body {
+  background: linear-gradient(135deg, #020617, #020617);
+  color: #e5e7eb;
+}
+.panel,
+.metric-card {
+  background: rgba(2, 6, 23, 0.92);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start; /* prevents stretching */
+}
+
+
+.metric-card {
+  background: #020617;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: inset 0 0 12px rgba(56,189,248,0.15);
+}
+
+.metric-card h3 {
+  color: #22d3ee;
+  text-shadow: 0 0 8px #22d3ee;
+  margin-bottom: 15px;
+}
+
+.risk-score {
+  font-size: 42px;
+  font-weight: bold;
+  color: #facc15;
+  text-shadow: 0 0 15px #facc15;
+}
+
+.text-output h3 {
+  color: #38bdf8;
+  margin-top: 25px;
+  text-shadow: 0 0 8px #38bdf8;
+}
+
+.text-output ul {
+  margin-left: 20px;
+}
+/* ===== CHART SIZE CONTROL ===== */
+.metric-card canvas {
+  width: 100% !important;
+  height: 220px !important;   /* 🔽 reduced size */
+}
+
